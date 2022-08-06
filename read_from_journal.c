@@ -54,7 +54,10 @@ void main()
 				{
 					printf("\nOn %s you wrote '%s' ", E.date, E.content);
 				}
-				else printf("\nNo entry found.");
+				else 
+				{
+					printf("\nNo entry found.");
+				}
 				n++;
 			}
 		}
