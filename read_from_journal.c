@@ -2,7 +2,7 @@
 #include<stdio.h>
 typedef struct {
 	int day;
-	char* date;
+	char date[11];
 	char content[1500];
 	char v;
 }Entry;
@@ -29,9 +29,9 @@ void main()
 	Entry E;
 	int p;
 	int n = 0;
-	char* dat;
+	int day;
 	printf("\nPassword: "); scanf("%d", &p);
-	printf("\nWhat date do you want to read from? "); getchar(); gets(dat);
+	printf("\nWhat day do you want to revisit? "); scanf("%d", &day);
 	f = fopen("crypt", "rb");
 	if (f == NULL)
 	{
@@ -50,7 +50,7 @@ void main()
 			{
 				fseek(g, n * sizeof(Entry), 0);
 				fread(&E, sizeof(Entry), 1, g);
-				if ((E.v == 1) && (strcmp(E.date, dat) == 0))
+				if ((E.v == 1) && (E.day == day))
 				{
 					printf("\nOn %s you wrote '%s' ", E.date, E.content);
 				}
