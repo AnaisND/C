@@ -14,7 +14,6 @@ void main()
 {
 	FILE* f, *g;
 	Cryptt C;
-	int i;
 	f = fopen("crypt", "wb");
 	if (f == NULL)
 	{
@@ -25,7 +24,7 @@ void main()
 		printf("\nCreate a password (numeric characters): ");
 		scanf("%d", &C.password);
 		fwrite(&C, sizeof(Cryptt), 1, f);
-		g = fopen("myfile", "w");
+		g = fopen("myfile", "wb");
 		if (g == NULL)
 		{
 			printf("!ERROR!");
