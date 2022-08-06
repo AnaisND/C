@@ -1,8 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 typedef struct {
-	char date[11];
+	int day;
+	char* date;
 	char content[1500];
+	char v;
 }Entry;
 
 typedef struct {
