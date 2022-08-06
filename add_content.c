@@ -40,7 +40,7 @@ void main()
 			}
 			else
 			{
-				printf("\nHow many days have passed since having your diary? "); scanf("%d", E.day);
+				printf("\nHow many days have passed since having your diary? "); scanf("%d", &E.day);
 				printf("\nToday's date: "); getchar(); gets(E.date);
 				printf("\nThe content of your entry: "); getchar(); gets(E.content);
 				fprintf(g, "\n%d Date: %s   '%s'", E.day, E.date, E.content);
