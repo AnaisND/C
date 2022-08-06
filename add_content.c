@@ -41,7 +41,7 @@ void main()
 		fread(&C, sizeof(Cryptt), 1, f);
 		if (p == C.password)
 		{
-			g = fopen("myfile", "wb");
+			g = fopen("myfile", "ab");
 			if (g == NULL)
 			{
 				printf("!ERROR!");
