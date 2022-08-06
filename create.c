@@ -38,7 +38,7 @@ void main()
 			E.day = 0;
 			printf("\nToday's date: "); getchar(); gets(E.date);
 			printf("\nThe content of your first entry (maximum 1500 characters): "); getchar(); gets(E.content);
-			fprintf(g, "\n%d Date: %s   %s",E.day, E.date, E.content);
+			fprintf(g, "\n%d Date: %s   '%s'",E.day, E.date, E.content);
 		}
 		fclose(g);
 	}
