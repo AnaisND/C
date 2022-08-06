@@ -2,7 +2,7 @@
 #include<stdio.h>
 typedef struct {
 	int day;
-	char date[11];
+	char* date;
 	char content[1500];
 	char v;
 }Entry;
