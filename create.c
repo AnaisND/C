@@ -3,6 +3,7 @@
 
 
 typedef struct {
+	int day;
 	char date[11];
 	char content[1500];
 }Entry;
@@ -34,9 +35,10 @@ void main()
 		}
 		else
 		{
+			E.day = 0;
 			printf("\nToday's date: "); getchar(); gets(E.date);
 			printf("\nThe content of your first entry (maximum 1500 characters): "); getchar(); gets(E.content);
-			fprintf(g, "\nDate: %s   %s", E.date, E.content);
+			fprintf(g, "\n%d Date: %s   %s",E.day, E.date, E.content);
 		}
 		fclose(g);
 	}
