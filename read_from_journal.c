@@ -2,7 +2,7 @@
 #include<stdio.h>
 typedef struct {
 	int day;
-	char date[11];
+	char* date;
 	char content[1500];
 	char v;
 }Entry;
@@ -29,7 +29,7 @@ void main()
 	Entry E;
 	int p;
 	int n = 0;
-	char dat;
+	char* dat;
 	printf("\nPassword: "); scanf("%d", &p);
 	printf("\nWhat date do you want to read from? "); getchar(); gets(dat);
 	f = fopen("crypt", "rb");
